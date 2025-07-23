@@ -1,0 +1,786 @@
+[
+  {
+    "name": "Cali Boxing & Fitness",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.381456,
+    "lng": -121.828805
+  },
+  {
+    "name": "Milpitas Boxing",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.416887,
+    "lng": -121.876855
+  },
+  {
+    "name": "Fitness Therapy",
+    "area": "San Francisco",
+    "city": "South San Francisco",
+    "lat": 37.649039,
+    "lng": -122.429417
+  },
+  {
+    "name": "LuxFit (Hayes Valley)",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.776401,
+    "lng": -122.424235
+  },
+  {
+    "name": "Sol Hot Yoga and Movement",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.803022,
+    "lng": -122.413806
+  },
+  {
+    "name": "9Round Milpitas",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.434832,
+    "lng": -121.885591
+  },
+  {
+    "name": "Legendz Fitness & Training Center",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.308079,
+    "lng": -121.878727
+  },
+  {
+    "name": "Melendez Boxing & Personal Training",
+    "area": "San Francisco",
+    "city": "San Bruno",
+    "lat": 37.622298,
+    "lng": -122.412519
+  },
+  {
+    "name": "Lift me Up Bungee Fitness",
+    "area": "East Bay",
+    "city": "Berkeley",
+    "lat": 37.857089,
+    "lng": -122.254245
+  },
+  {
+    "name": "Team Reys",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.299579,
+    "lng": -121.871094
+  },
+  {
+    "name": "Ideal Vision",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.436454,
+    "lng": -121.861989
+  },
+  {
+    "name": "United Studios of Self Defense Burlingame",
+    "area": "Peninsula",
+    "city": "Burlingame",
+    "lat": 37.576579,
+    "lng": -122.346183
+  },
+  {
+    "name": "Danny s Body Shop",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.309638,
+    "lng": -121.897606
+  },
+  {
+    "name": "Gymnanigans Boxing Fitness & Strength Training",
+    "area": "North Bay",
+    "city": "Vallejo",
+    "lat": 38.100797,
+    "lng": -122.23903
+  },
+  {
+    "name": "Combat Krav Maga SF",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.788314,
+    "lng": -122.421226
+  },
+  {
+    "name": "PUNCH KING FITNESS | Silicon Valley",
+    "area": "South Bay",
+    "city": "Santa Clara",
+    "lat": 37.352195,
+    "lng": -121.976766
+  },
+  {
+    "name": "Jiaren Yoga Studio",
+    "area": "South Bay",
+    "city": "Santa Clara",
+    "lat": 37.348293,
+    "lng": -121.945971
+  },
+  {
+    "name": "Box Fit",
+    "area": "South Bay",
+    "city": "Morgan Hill",
+    "lat": 37.130238,
+    "lng": -121.681557
+  },
+  {
+    "name": "Ralph Gracie Jiu-Jitsu Academy San Francisco",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.77686,
+    "lng": -122.411107
+  },
+  {
+    "name": "Triumph Fitness Center",
+    "area": "South Bay",
+    "city": "American Canyon",
+    "lat": 38.17727,
+    "lng": -122.258529
+  },
+  {
+    "name": "F45 Training Petaluma",
+    "area": "North Bay",
+    "city": "Petaluma",
+    "lat": 38.248918,
+    "lng": -122.627035
+  },
+  {
+    "name": "F45 Training Bennett Valley",
+    "area": "North Bay",
+    "city": "Santa Rosa",
+    "lat": 38.443589,
+    "lng": -122.675236
+  },
+  {
+    "name": "F45 Training North Santa Rosa",
+    "area": "North Bay",
+    "city": "Santa Rosa",
+    "lat": 38.477069,
+    "lng": -122.735707
+  },
+  {
+    "name": "F45 Training Windsor-Healdsburg",
+    "area": "North Bay",
+    "city": "Windsor",
+    "lat": 38.54831,
+    "lng": -122.806452
+  },
+  {
+    "name": "Antdawgs MMA Training Center",
+    "area": "South Bay",
+    "city": "Gilroy",
+    "lat": 36.998743,
+    "lng": -121.566479
+  },
+  {
+    "name": "ALOHA TIME BOXING",
+    "area": "Peninsula",
+    "city": "San Mateo",
+    "lat": 37.563355,
+    "lng": -122.319068
+  },
+  {
+    "name": "O2 BodyFit",
+    "area": "Peninsula",
+    "city": "Daly City",
+    "lat": 37.688941,
+    "lng": -122.469056
+  },
+  {
+    "name": "The Fitness Tech",
+    "area": "Peninsula",
+    "city": "South San Francisco",
+    "lat": 37.655519,
+    "lng": -122.410236
+  },
+  {
+    "name": "NO FAKE SWEAT",
+    "area": "Peninsula",
+    "city": "South San Francisco",
+    "lat": 37.642658,
+    "lng": -122.420018
+  },
+  {
+    "name": "Pole SF | Spicy Dancing",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.767418,
+    "lng": -122.406216
+  },
+  {
+    "name": "1 ON 1 PERSONAL FITNESS",
+    "area": "North Bay",
+    "city": "Dublin",
+    "lat": 37.706346,
+    "lng": -121.906655
+  },
+  {
+    "name": "CROSSFIT INCREDIBLE",
+    "area": "Peninsula",
+    "city": "Menlo Park",
+    "lat": 37.48668,
+    "lng": -122.185878
+  },
+  {
+    "name": "GYM CHECK PRO",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.350709,
+    "lng": -121.826927
+  },
+  {
+    "name": "FC50 Fitness",
+    "area": "East Bay",
+    "city": "Pleasanton",
+    "lat": 37.699182,
+    "lng": -121.916497
+  },
+  {
+    "name": "CUSTOM FIT",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.771553,
+    "lng": -122.424425
+  },
+  {
+    "name": "De La Soul Muay Thai",
+    "area": "South Bay",
+    "city": "Sunnyvale",
+    "lat": 37.376983,
+    "lng": -122.012694
+  },
+  {
+    "name": "Jeffrey Hu - Certified Personal Training",
+    "area": "North Bay",
+    "city": "Pleasanton",
+    "lat": 37.646081,
+    "lng": -121.862128
+  },
+  {
+    "name": "JustRide Studio",
+    "area": "East Bay",
+    "city": "Concord",
+    "lat": 37.937734,
+    "lng": -122.025296
+  },
+  {
+    "name": "Powerhouse Gym",
+    "area": "Peninsula",
+    "city": "Redwood City",
+    "lat": 37.485737,
+    "lng": -122.228349
+  },
+  {
+    "name": "Fit Zone Milpitas",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.417672,
+    "lng": -121.873126
+  },
+  {
+    "name": "LoveFix - Alegria Mind Body Soul",
+    "area": "South Bay",
+    "city": "Gilroy",
+    "lat": 37.006771,
+    "lng": -121.570466
+  },
+  {
+    "name": "Kuleana Jiu-Jitsu",
+    "area": "South Bay",
+    "city": "Sunnyvale",
+    "lat": 37.37203,
+    "lng": -122.001788
+  },
+  {
+    "name": "Guerrilla Jiu-Jitsu Academy - Pleasanton",
+    "area": "East Bay",
+    "city": "Pleasanton",
+    "lat": 37.658457,
+    "lng": -121.899536
+  },
+  {
+    "name": "BODY.",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.764555,
+    "lng": -122.432062
+  },
+  {
+    "name": "Western Muay Thai",
+    "area": "South Bay",
+    "city": "Sunnyvale",
+    "lat": 37.37203,
+    "lng": -122.001788
+  },
+  {
+    "name": "MainSav Fitness",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.299465,
+    "lng": -121.871283
+  },
+  {
+    "name": "Bay Breakers Boxing Gym",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.794087,
+    "lng": -122.423346
+  },
+  {
+    "name": "Solidarity Jiu Jitsu",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.247115,
+    "lng": -121.886828
+  },
+  {
+    "name": "Thunder Fitness San Jose",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.253716,
+    "lng": -121.831885
+  },
+  {
+    "name": "Benjamin's Boxing Fit",
+    "area": "East Bay",
+    "city": "San Ramon",
+    "lat": 37.780665,
+    "lng": -121.980931
+  },
+  {
+    "name": "Cardio with Carah (Zumba Fitness)",
+    "area": "East Bay",
+    "city": "Oakland",
+    "lat": 37.84489,
+    "lng": -122.263429
+  },
+  {
+    "name": "Cali Made Arena",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.26149,
+    "lng": -121.930055
+  },
+  {
+    "name": "Gabucan Family Dentistry",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.416887,
+    "lng": -121.876855
+  },
+  {
+    "name": "CrossFit Kindred",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.322565,
+    "lng": -121.809585
+  },
+  {
+    "name": "Your Business Here ",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.365612,
+    "lng": -121.847392
+  },
+  {
+    "name": "XIOS Strength & Conditioning",
+    "area": "South Bay",
+    "city": "Gilroy",
+    "lat": 37.006503,
+    "lng": -121.568891
+  },
+  {
+    "name": "Marvin's Strength Training",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.339056,
+    "lng": -121.900544
+  },
+  {
+    "name": "MadamCJda3rd YOGA",
+    "area": "East Bay",
+    "city": "Oakland",
+    "lat": 37.821994,
+    "lng": -122.246714
+  },
+  {
+    "name": "Coast Range CrossFit (Gilroy)",
+    "area": "South Bay",
+    "city": "Gilroy",
+    "lat": 37.012596,
+    "lng": -121.595405
+  },
+  {
+    "name": "Ollin Atletico",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.31723,
+    "lng": -121.907491
+  },
+  {
+    "name": "The Filipino Hulk PT (Coach Kenneth Lacsa)",
+    "area": "San Francisco",
+    "city": "Sacramento",
+    "lat": 38.578526,
+    "lng": -121.487925
+  },
+  {
+    "name": "Max Muscle Nutrition & Wellness (Galt, CA)",
+    "area": "Sacramento",
+    "city": "Galt",
+    "lat": 38.254045,
+    "lng": -121.294713
+  },
+  {
+    "name": "Barre + Wellness",
+    "area": "South Bay",
+    "city": "Santa Clara",
+    "lat": 37.347783,
+    "lng": -121.949661
+  },
+  {
+    "name": "Yoga Belly",
+    "area": "San Francisco",
+    "city": "Mountain View",
+    "lat": 37.39736,
+    "lng": -122.076261
+  },
+  {
+    "name": "SHFT MOVEMENT (Spine Health Functional Therapy)",
+    "area": "Peninsula",
+    "city": "Daly City",
+    "lat": 37.699771,
+    "lng": -122.482739
+  },
+  {
+    "name": "Davis Forge PT",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.786576,
+    "lng": -122.433198
+  },
+  {
+    "name": "Pro Wrestling Revolution Training Academy",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.374345,
+    "lng": -121.909865
+  },
+  {
+    "name": "EVO Sports Club",
+    "area": "South Bay",
+    "city": "Santa Clara",
+    "lat": 37.352195,
+    "lng": -121.976766
+  },
+  {
+    "name": "Banana Yoga",
+    "area": "East Bay",
+    "city": "Oakland",
+    "lat": 37.828467,
+    "lng": -122.258821
+  },
+  {
+    "name": "Lotusland Yoga SF",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.751054,
+    "lng": -122.420858
+  },
+  {
+    "name": "Fitness System - Land Park",
+    "area": "Sacramento",
+    "city": "West Sacramento",
+    "lat": 38.576656,
+    "lng": -121.545388
+  },
+  {
+    "name": "F45 Training Willow Glen East",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.276641,
+    "lng": -121.880832
+  },
+  {
+    "name": "F45 North Sunnyvale",
+    "area": "South Bay",
+    "city": "Sunnyvale",
+    "lat": 37.403457,
+    "lng": -122.008166
+  },
+  {
+    "name": "HOLSELF",
+    "area": "Sacramento",
+    "city": "Sacramento",
+    "lat": 38.574633,
+    "lng": -121.381846
+  },
+  {
+    "name": "Sac's Finest Boxing",
+    "area": "Sacramento",
+    "city": "Sacramento",
+    "lat": 38.510975,
+    "lng": -121.446671
+  },
+  {
+    "name": "A Better You Fitness",
+    "area": "East Bay",
+    "city": "Hayward",
+    "lat": 37.680076,
+    "lng": -122.069956
+  },
+  {
+    "name": "Hot Spot Yoga Oakland",
+    "area": "East Bay",
+    "city": "Oakland",
+    "lat": 37.800139,
+    "lng": -122.248532
+  },
+  {
+    "name": "Wellness Haven - ONLINE YOGA",
+    "area": "East Bay",
+    "city": "San Ramon",
+    "lat": 37.768556,
+    "lng": -121.975531
+  },
+  {
+    "name": "Pacific Spin and Strength",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.330977,
+    "lng": -121.909559
+  },
+  {
+    "name": "Bloom Yoga",
+    "area": "East Bay",
+    "city": "San Leandro",
+    "lat": 37.730168,
+    "lng": -122.139289
+  },
+  {
+    "name": "Rogue Empire MMA",
+    "area": "San Francisco",
+    "city": "East Palo Alto",
+    "lat": 37.474343,
+    "lng": -122.131599
+  },
+  {
+    "name": "Lion's Den Boxing Gym",
+    "area": "East Bay",
+    "city": "Pittsburg",
+    "lat": 38.024627,
+    "lng": -121.879397
+  },
+  {
+    "name": "Kennel Boxing",
+    "area": "East Bay",
+    "city": "San Leandro",
+    "lat": 37.730333,
+    "lng": -122.159758
+  },
+  {
+    "name": "Red Dot Fitness",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.892258,
+    "lng": -122.277631
+  },
+  {
+    "name": "Morph Fitness",
+    "area": "San Francisco",
+    "city": "San Mateo",
+    "lat": 37.564094,
+    "lng": -122.320375
+  },
+  {
+    "name": "Couture Movement (Dance & Yoga)",
+    "area": "San Francisco",
+    "city": "Millbrae",
+    "lat": 37.604041,
+    "lng": -122.393635
+  },
+  {
+    "name": "One by One Fitness",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.420874,
+    "lng": -121.893173
+  },
+  {
+    "name": "Azteca Boxing",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.312051,
+    "lng": -121.868912
+  },
+  {
+    "name": "Song Bird Dance",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.788222,
+    "lng": -122.420765
+  },
+  {
+    "name": "Go Go Skateboarding",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.314302,
+    "lng": -121.794421
+  },
+  {
+    "name": "THE WELL STUDIO | AZO Fitness Inc.",
+    "area": "East Bay",
+    "city": "Dublin",
+    "lat": 37.704914,
+    "lng": -121.932604
+  },
+  {
+    "name": "WarCat Strength Gym",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.339056,
+    "lng": -121.900544
+  },
+  {
+    "name": "Lekci Martial Arts | SROFG Leagues",
+    "area": "East Bay",
+    "city": "Concord",
+    "lat": 37.973679,
+    "lng": -122.055469
+  },
+  {
+    "name": "Hot Yoga Plus - Seacliff",
+    "area": "San Francisco",
+    "city": "San Francisco",
+    "lat": 37.780608,
+    "lng": -122.480238
+  },
+  {
+    "name": "Hot Yoga Plus - San Mateo",
+    "area": "San Francisco",
+    "city": "San Mateo",
+    "lat": 37.553302,
+    "lng": -122.315878
+  },
+  {
+    "name": "Hot Yoga Plus - Daly City",
+    "area": "San Francisco",
+    "city": "Daly City",
+    "lat": 37.697041,
+    "lng": -122.484432
+  },
+  {
+    "name": "Barre Wellness - Campbell",
+    "area": "South Bay",
+    "city": "Campbell",
+    "lat": 37.284945,
+    "lng": -121.949873
+  },
+  {
+    "name": "Alameda Fitness & Spa (FNS)",
+    "area": "East Bay",
+    "city": "Alameda",
+    "lat": 37.785954,
+    "lng": -122.278754
+  },
+  {
+    "name": "Teddy's Total Body",
+    "area": "East Bay",
+    "city": "San Leandro",
+    "lat": 37.719256,
+    "lng": -122.148755
+  },
+  {
+    "name": "X-FIT TRAINING (El Cerrito & Pinole)",
+    "area": "East Bay",
+    "city": "Pinole",
+    "lat": 38.005246,
+    "lng": -122.308609
+  },
+  {
+    "name": "Jireh Boxing Kickboxing",
+    "area": "South Bay",
+    "city": "Santa Cruz",
+    "lat": 36.971914,
+    "lng": -122.025906
+  },
+  {
+    "name": "Daruma Dojo (Sunnyvale)",
+    "area": "South Bay",
+    "city": "Sunnyvale",
+    "lat": 37.369823,
+    "lng": -122.032139
+  },
+  {
+    "name": "Daruma Dojo (Milpitas)",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.428234,
+    "lng": -121.908049
+  },
+  {
+    "name": "Los Gatos Boxing",
+    "area": "South Bay",
+    "city": "Los Gatos",
+    "lat": 37.239743,
+    "lng": -121.960646
+  },
+  {
+    "name": "Dance Fitness",
+    "area": "South Bay",
+    "city": "Milpitas",
+    "lat": 37.416887,
+    "lng": -121.876855
+  },
+  {
+    "name": "Lifestyle Training Center",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.312547,
+    "lng": -121.90351
+  },
+  {
+    "name": "BODIED",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.288662,
+    "lng": -121.887576
+  },
+  {
+    "name": "DTSweat",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.310672,
+    "lng": -121.903117
+  },
+  {
+    "name": "Victory Submission Strength",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.330766,
+    "lng": -121.911351
+  },
+  {
+    "name": "CrossFit Silicon Valley",
+    "area": "South Bay",
+    "city": "San Jose",
+    "lat": 37.322278,
+    "lng": -121.908202
+  },
+  {
+    "name": "Eternal Strength Gym",
+    "area": "South Bay",
+    "city": "Santa Clara",
+    "lat": 37.356367,
+    "lng": -121.946491
+  },
+  {
+    "name": "Silicon Valley Nutrition & Performance",
+    "area": "South Bay",
+    "city": "Santa Clara",
+    "lat": 37.352195,
+    "lng": -121.976766
+  }
+]

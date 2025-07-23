@@ -1,0 +1,84 @@
+{
+    "Resources": {
+        "SecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "launch-wizard-5 created 2025-04-17T13:55:05.927Z",
+                "GroupName": "launch-wizard-5",
+                "SecurityGroupIngress": [
+                    {
+                        "CidrIp": "0.0.0.0/0",
+                        "FromPort": 22,
+                        "IpProtocol": "tcp",
+                        "ToPort": 22
+                    },
+                    {
+                        "CidrIp": "0.0.0.0/0",
+                        "FromPort": 443,
+                        "IpProtocol": "tcp",
+                        "ToPort": 443
+                    },
+                    {
+                        "CidrIp": "0.0.0.0/0",
+                        "FromPort": 80,
+                        "IpProtocol": "tcp",
+                        "ToPort": 80
+                    }
+                ],
+                "VpcId": "vpc-0a33df88f9838ab40"
+            }
+        },
+        "EC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-04f167a56786e4b09",
+                "InstanceType": "t2.medium",
+                "KeyName": "UnRetires_Server",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/sda1",
+                        "Ebs": {
+                            "DeleteOnTermination": true,
+                            "Encrypted": false,
+                            "Iops": 3000,
+                            "SnapshotId": "snap-00576a29f5cb985fe",
+                            "Throughput": 125,
+                            "VolumeSize": 30,
+                            "VolumeType": "gp3"
+                        }
+                    }
+                ],
+                "NetworkInterfaces": [
+                    {
+                        "AssociatePublicIpAddress": true,
+                        "DeviceIndex": 0,
+                        "GroupSet": [
+                            {
+                                "Ref": "SecurityGroup"
+                            }
+                        ]
+                    }
+                ],
+                "CreditSpecification": {
+                    "CPUCredits": "standard"
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "UnRetires_Server"
+                    }
+                ],
+                "MetadataOptions": {
+                    "HttpEndpoint": "enabled",
+                    "HttpPutResponseHopLimit": 2,
+                    "HttpTokens": "required"
+                },
+                "PrivateDnsNameOptions": {
+                    "EnableResourceNameDnsARecord": true,
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "HostnameType": "ip-name"
+                }
+            }
+        }
+    }
+}
