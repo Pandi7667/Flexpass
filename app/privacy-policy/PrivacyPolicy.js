@@ -4,11 +4,12 @@ import Link from 'next/link';
 function PrivacyContent() {
     return (
        <>
-        <div className='row'>
-            <div className='col-lg-12 pt-lg-4 pt-sm-43 pt-3 pb-3'>
+        <div className='row ptop_innerpage_contact_bottom'>
+            <div className='col-lg-12 pt-lg-4 pt-sm-43 pt-3 pb-3 p-5'>
                 <h1>Privacy Policy</h1>
-                <p><strong>Definitions</strong></p>
-                <p>Flex Pass is committed to protecting your privacy and governs the Privacy Terms of our website, located at https://www.myFlexPass.com/privacypolicy. This Privacy Policy explains how your personal information is collected, used, and disclosed by our Company. By accessing or using our Service, you announce that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.
+                <p>PLEASE READ THIS PRIVACY POLICY AND OUR TERMS OF USE CAREFULLY. THE TERMS STATED IN THIS PRIVACY POLICY CONSTITUTE A BINDING LEGAL AGREEMENT BETWEEN YOU AND FLEXPASS.COM. BY USING THIS SITE AND THE RELATED SERVICES, YOU UNCONDITIONALLY AGREE TO BE BOUND BY THE TERMS STATED IN THIS PRIVACY POLICY AND OUR TERMS OF USE, INCLUDING ALL EXCLUSIONS AND LIMITATIONS OF LIABILITY, AND WARRANT THAT YOU HAVE FULL AUTHORITY AND CAPACITY, LEGAL AND OTHERWISE, TO USE THE SERVICES. YOU MAY NOT ACCESS OR USE THIS SITE OR THE SERVICES IF YOU DO NOT AGREE TO ANY PART OF THESE TERMS. WE RESERVE THE RIGHT TO PERIODICALLY MAKE UPDATES TO THIS PRIVACY POLICY AS OUR PRACTICES CHANGE. YOUR CONTINUED USE OF THE SITE AFTER SUCH CHANGES CONSTITUTES YOUR ACCEPTANCE OF THE CHANGES, SO PLEASE CHECK BACK PERIODICALLY FOR UPDATES. </p>
+                <h5><strong>Definitions</strong></h5>
+                <p>Flex Pass (“Company”) is committed to protecting your privacy and this privacy policy (“Private Policy”) governs the Privacy Terms of our website, located at <Link href={'https://myflexpass.com/privacy-policy/'}>https://myflexPass.com/privacy-policy</Link>. This Privacy Policy explains how your personal information is collected, used, and disclosed by our Company. By accessing or using our platform and services (“Services”), you acknowledge that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.
                 </p>
                 <ul>
                     <li><strong>Personal Data:</strong> Personal Data means data about a living individual who can be identified from such data. Personal Data is any information that directly, indirectly, or in connection with other information allows for the identification of a natural person.</li>
@@ -20,31 +21,91 @@ function PrivacyContent() {
                     <li>
                         <strong> Data Subject:</strong> Data Subject is any living individual who is the subject of Personal Data.
                     </li>
-                    <li><strong>User:</strong> The User is the individual using our Service. The User corresponds to the Data Subject, who is the subject of Personal Data.</li>
+                    <li><strong>User:</strong> The User is the individual using our Services. The User corresponds to the Data Subject, who is the subject of Personal Data.</li>
                 </ul>
                 <h5>What Information Do We Collect?</h5>
-                <p>We collect several types of information for various purposes to provide and improve our Service to you.</p>
+                <p>We collect several types of information for various purposes to provide and improve our Services to you.</p>
                 <h5>Types of Data Collected</h5>
                 <h5>• Personal Data</h5>
-                <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (Personal Data). It means - Email address, first and last name, date of birth, address, city, state/Country, Postcode, Phone, Date of birth.</p>
+                <p>While using our Services, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (Personal Data). It includes, but not limited to, email address, first and last names, date of birth, address, city, state/country, postcode, phone.</p>
+                <h5>• Google Sign-In Data  (OAuth)</h5>
+                    <p>When you choose to sign in using Google Sign-In, we collect:</p>
+                    <ul>
+                        <li><p >- Your Google account email address</p></li>
+                        <li><p >- Your Google profile name</p></li>
+                        <li><p >- Your Google profile picture (if available)</p></li>
+                        <li><p >- Basic profile information from your Google account</p></li>
+                        <li><p >- Google user ID for authentication purposes</p></li>
+                    </ul>
+                    <h5>**Important**: We do NOT access:</h5>
+                    <ul>
+                        <li><p >- Your Google Drive files</p></li>
+                        <li><p >- Your Gmail messages</p></li>
+                        <li><p >- Your Google Calendar</p></li>
+                        <li><p >- Your Google Contacts</p></li>
+                        <li><p >- Your Google Photos</p></li>
+                        <li><p >- Any other Google services beyond basic profile information</p></li>
+                        <li><p >- Apple Sign-In Data  </p></li>
+                    </ul>
+                    <p>When you choose to sign in using Apple ID, we collect:</p>
+                    <ul>
+                        <li><p >-  Your email address (or Apple`s private relay email if you choose to hide your email)</p></li>
+                        <li><p >-   Your first and last name (if you choose to share them)</p></li>
+                        <li><p >-   A unique user identifier from Apple</p></li>
+                        <li><p >-   Whether the email has been verified by Apple</p></li>
+                    </ul>
+                    <h5>**Privacy Features with Apple Sign-In**:</h5>
+                    <ul>
+                        <li><p >- You can choose to hide your email address, in which case Apple provides us with a unique relay email</p></li>
+                        <li><p >-  You can choose whether to share your name with us</p></li>
+                        <li><p >-  Apple does not track users or create profiles when using Sign in with Apple</p></li>
+                        <li><p >-  We do NOT have access to your Apple ID password or any other Apple</p></li>
+                    </ul>
+                    <h5>• Facebook Log-In Data  </h5>
+                    <p>When you choose to sign in using Facebook, we collect:</p>
+                    <ul>
+                        <li><p >- Your Facebook email address</p></li>
+                        <li><p >- Your Facebook name</p></li>
+                        <li><p >- Your Facebook profile picture</p></li>
+                        <li><p >- Your Facebook ID (unique identifier)</p></li>
+                        <li><p >- Basic public profile information</p></li>
+                    </ul>
+                    <h5>**Important**: We do NOT access:</h5>
+                    <ul>
+                        <li><p >- Your Facebook posts or timeline</p></li>
+                        <li><p >- Your Facebook friends list (unless explicitly authorized)</p></li>
+                        <li><p >- Your Facebook messages</p></li>
+                        <li><p >- Your Facebook photos (except profile picture)</p></li>
+                        <li><p >- Your Facebook likes or interests</p></li>
+                        <li><p >- Any other Facebook data beyond basic profile information</p></li>
+                    </ul>
                 <h5>• Credit/Debit Card Information</h5>
                 <p>We do not store this information. We leverage Stripe, our payment vendor, for collection and storage of said information.</p>
                 <h5>• Usage Data</h5>
-                <p>We may also collect information on how the Service is accessed and used (Usage Data). This Usage Data may include information such as your computer’s Internet Protocol address (IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+                <p>We may also collect information on how the Services is accessed and used (Usage Data). This Usage Data may include information such as your computer`s Internet Protocol address (IP address), browser type, browser version, the pages of our Services that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data. </p>
                 <h5>• Tracking & Cookies Data</h5>
-                <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.</p>
-                <p>Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.</p>
-                <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+                <p>We use cookies and similar tracking technologies to track the activity on our Services and hold certain information.</p>
+                <p>Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Services. </p>
+                <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Services.</p>
                 <h5>How do we use the information we collect?</h5>
                 <p>Any of the information we collect from you may be used in one of the following ways:</p>
+                <p>• To administer the Site and enforce our rules and policies.</p>
+                <p>• To provide access to Site content and Services to you.</p>
+                <p>• To maintain security over your information, the Site, and its contents.</p>
+                <p>• To process and respond to your feedback and suggestions.</p>
+                <p>• To contact you regarding your account or profile.</p>
+                <p>• To fulfill any other purpose with your consent.</p>
+                <p>• We may share personal information and other information that we collect as follows:</p>
+                <p>• With our affiliates, including any subsidiaries we now own or later acquire.</p>
+                <p>• With our trusted employees, contractors, business partners, service providers, suppliers, vendors, and other third parties that support us, which may include sending you emails on our behalf; analyzing your activities and interactions on the Site in order to make improvements to the Site, Services, and experiences of our visitors; and providing support to the Site, the Services, our operations, or fulfilling your requests. These third parties may only use personal information in order to provide such support and are contractually required to maintain the confidentiality of your information.</p>
+                <p>• In response to court orders, subpoenas, or legal processes, such as requests from government regulatory or law enforcement agencies; to defend, pursue, or participate in legal actions or proceedings or exercise a legal right; to take precautions against actual or potential liabilities; to investigate or respond to potential or suspected illegal activities, fraud, or threats to the Site, its visitors, or the property or physical safety of any person; to enforce or investigate violations of our rules or terms of use; or as otherwise permitted or required by law.</p>
+                <p>• With those that we so indicate at the time you provide the information</p>
                 <p>• To personalize your experience (your information helps us to better respond to your individual needs)</p>
                 <ul>
-                    <li><p >
-                        <font color="#000000"><font face="Lato, sans-serif"><font size="2">To
-                            improve our Service (we continually strive to improve </font></font></font><font face="Lato, sans-serif"><font size="2">our
-                                application offerings based on the information and feedback we
-                                receive from you) </font></font>
-                    </p></li>
+                <li><p >
+                    <font color="#000000"><font face="Lato, sans-serif"><font size="2">To gather analysis or valuable information so that we can improve our Services (we continually strive to improve our application offerings based on the information and feedback we receive from you) </font> </font></font>
+                    </p>
+                </li>
                     <li><p >
                         <font face="Lato, sans-serif"><font size="2">To
                             process transactions </font></font>
@@ -55,30 +116,63 @@ function PrivacyContent() {
                     </p></li>
                     <li><p>
                         <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" >To
-                            notify you about changes to our Service </font></font></font>
+                            notify you about changes to our Services </font></font></font>
                     </p></li>
-                    <li><p >
+                    {/* <li><p >
                         <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" >To
                             gather analysis or valuable information so that we can improve our
                             services </font></font></font>
-                    </p></li>
+                    </p></li> */}
                     <li><p >
                         <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" >To
-                            monitor the usage of our Service </font></font></font>
+                            monitor the usage of our Services </font></font></font>
                     </p></li>
                     <li><p >
                         <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" >To
                             detect, prevent and address technical issues </font></font></font>
                     </p></li>
                     <li><p >
-                        <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" >To
-                            provide you with news, special offers and general information about
-                            other goods, services and events which we offer that are similar to
-                            those that you have already purchased or enquired about unless you
-                            have opted not to receive such information </font></font></font>
+                        <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" >
+                            To provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information 
+                            </font></font></font>
                     </p></li>
                 </ul>
-                <h5>How do we use your email address? </h5>
+                 <h5>• Google Sign-In Data Usage</h5>
+                    <p>Information obtained through Google Sign-In is specifically used to:</p>
+                    <ul>
+                        <li><p >- Streamline the account creation process</p></li>
+                        <li><p >- Provide secure authentication without storing passwords</p></li>
+                        <li><p >- Pre-populate your profile with accurate information</p></li>
+                        <li><p >- Enable single sign-on functionality</p></li>
+                        <li><p >- Maintain account security</p></li>
+                        <li><p >- Authenticate your identity across sessions</p></li>
+                    </ul>
+                     <h5>• Apple Sign-In Data Usage</h5>
+                    <p>Information obtained through Apple Sign-In is specifically used to:</p>
+                    <ul>
+                        <li><p >- Create and authenticate your FlexPass account</p></li>
+                        <li><p >- Provide secure login without storing passwords</p></li>
+                        <li><p >- Communicate with you (using either your real email or Apple`s relay email)</p></li>
+                        <li><p >- Maintain account security and prevent fraud</p></li>
+                        <li><p >- Enable seamless authentication across your Apple devices</p></li>
+                        <li><p >- Respect your privacy choices (hidden email, name sharing preferences)</p></li>
+                    </ul>
+                    
+                    <h5>• How do we use your email address?</h5>
+                    <p>By submitting your email address, you agree to receive emails from us. You can cancel your participation in any of these email lists at any time by clicking on the opt-out link or other unsubscribe option that is included in the respective email. We only send emails to people who have authorized us to contact them, either directly, or through a third party. We do not send unsolicited commercial emails, because we hate spam as much as you do.
+                    </p><p>Email addresses submitted only through the order processing page will be used for the sole purpose of sending you information and updates pertaining to your order. If, however, you have provided the same email to us through another method, we may use it for any of the purposes stated in this Privacy Policy. Note: If at any time you would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.
+                    </p>
+                    <h5>How long do we keep your information? </h5>
+                    <p>We will retain the information we collect from you for a period of two (2) years, or until you are an active user of the services we provide. After the expiry of this period, we undertake to delete any information we have collected from you. </p>
+                    <h5>Data Retention Details: </h5>
+                    <p>Account Data: Retained for 2 years or while your account is active
+                        Google Sign-In Data: Retained until you revoke access or delete your account
+                        Apple Sign-In Data: Retained until you stop using Apple ID with our app or delete your account
+                        Facebook Login Data: Retained until you revoke app permissions or delete your account
+                        Usage Data: Retained for internal analysis for up to 2 years
+                        Payment Information: Managed by Stripe according to their retention policies</p>
+
+                {/* <h5>How do we use your email address? </h5>
                 <p>By
                     submitting your email address, you agree to receive emails from us.
                     You can cancel your participation in any of these email lists at any
@@ -94,22 +188,18 @@ function PrivacyContent() {
                     email to us through another method, we may use it for any of the
                     purposes stated in this Policy. Note: If at any time you would like
                     to unsubscribe from receiving future emails, we include detailed
-                    unsubscribe instructions at the bottom of each email. </p>
-                <h5>How long do we keep your
+                    unsubscribe instructions at the bottom of each email. </p> */}
+                    
+                {/* <h5>How long do we keep your
                     information? </h5>
                 <p>We
                     will retain the information we collect from you for a period of two
                     (2) years, or until you are an active user of the services we
                     provide. After the expiry of this period, we undertake to delete any
-                    information we have collected from you. </p>
-                <h5>Disclosure of data</h5>
-                <p>We will retain your Personal Data for a period of two (2) years. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
-                <p>We
-                    will also retain Usage Data for internal analysis purposes. Usage
-                    Data is generally retained for a shorter period of time, except when
-                    this data is used to strengthen the security or to improve the
-                    functionality of our Service, or we are legally obligated to retain
-                    this data for longer time periods. </p>
+                    information we have collected from you. </p> */}
+                <h5>Disclosure of Personal Data </h5>
+                <p>We will retain your Personal Data for a period of two (2) years. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your Personal Data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+                <p>We will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Services, or we are legally obligated to retain this data for longer time periods.  </p>
                 <ul>
                     <li><p >
                         <font color="#1e2328"><font face="Lato, sans-serif"><font size="2" ><b>Business
@@ -130,57 +220,49 @@ function PrivacyContent() {
                 <h5>How do we protect your information? </h5>
                 <p>We
                     implement a variety of security measures to maintain the safety of
-                    your personal information when you place an order or enter, submit,
+                    your Personal Data when you place an order or enter, submit,
                     or access your personal information. </p>
                 <h5>Your consent </h5>
-                <p>By
-                    using our Website, registering an account, accessing our services,
-                    you consent to this Privacy Policy Term. </p>
-                <p>This Privacy Policy applies only to our Services.</p>
-                <h5>Information
-                    collected automatically </h5>
-                <p>feature
-                    you requested. “Cookies” are identifiers we transfer to your
-                    browser or device that allow us to recognize your browser or device
-                    and tell us how and when pages and features in our Services are
-                    visited and by how many people. You may be able to change the
-                    preferences on your browser or device to prevent or limit your
-                    device’s acceptance of cookies, but this may prevent you from
-                    taking advantage of some of our features. Our advertising partners
-                    may also transmit cookies to your browser or device, when you click
-                    on ads that appear on the Services. Also, if you click on a link to a
-                    third-party website or service, such third party may also transmit
-                    cookies to you. Again, this Privacy Policy does not cover the use of
-                    cookies by any third parties, and we aren’t responsible for their
-                    privacy policies and practices. Please be aware that cookies placed
-                    by third parties may continue to track your activities online even
-                    after you have left our Services, and those third-parties may not
-                    honor “Do Not Track” requests you have set using your browser or
-                    device. </p>
-                <p>We
-                    may use this data to customize content for you that we think you
-                    might like, based on your usage patterns. We may also use it to
-                    improve the Services—for example, this data can tell us how often
-                    users use a particular feature of the Services, and we can use that
-                    knowledge to make the Services interesting to as many users as
-                    possible. </p>
-                <h5>Security of Your Information </h5>
-                <p>Your
-                    account is protected by a password for your privacy and security. You
-                    must prevent unauthorized access to your account and Personal
-                    Information by selecting and protecting your password appropriately
-                    and limiting access to your computer or device and browser by signing
-                    off after you have finished accessing your account. </p>
-                <p>We
-                    endeavor to protect the privacy of your account and other Personal
-                    Information we hold in our records, but unfortunately, we cannot
-                    guarantee complete security. Unauthorized entry or use, hardware or
-                    software failure, and other factors, may compromise the security of
-                    user information at any time. </p>
+                <p>By using our website, registering an account, accessing our Services, you consent to this Privacy Policy.</p>
+                <p>This Privacy Policy applies only to our website and/or Services.</p>
+                <h5>Information collected automatically </h5>
+                <p>Whenever you interact with our Services, we automatically receive and record your Usage Data, such as information on our server logs from your browser or device, which may include your IP address, geolocation data, device identification, “cookie” information, the type of browser and/or device you’re using to access our Services, and the page or feature you requested. “Cookies” are identifiers we transfer to your browser or device that allow us to recognize your browser or device and tell us how and when pages and features in our Services are visited and by how many people. You may be able to change the preferences on your browser or device to prevent or limit your device’s acceptance of cookies, but this may prevent you from taking advantage of some of our features. Our advertising partners may also transmit cookies to your browser or device when you click on ads that appear on the Services. Also, if you click on a link to a third-party website or service, such third party may also transmit cookies to you. Again, this Privacy Policy does not cover the use of cookies by any third parties, and we are not responsible for their privacy policies and practices. Please be aware that cookies placed by third parties may continue to track your activities online even after you have left our Services, and those third-parties may not honor “Do Not Track” requests you have set using your browser or device. </p>
+                <p>We may use your Usage Data to customize content for you that we think you might like, based on your usage patterns. We may also use it to improve the Services—for example, this data can tell us how often users use a particular feature of the Services, and we can use that knowledge to make the Services interesting to as many users as possible. </p>
+                <h5>Security of Your Information  </h5>
+                <p>Your account is protected by a password for your privacy and security. You must prevent unauthorized access to your account and Personal Data by selecting and protecting your password appropriately and limiting access to your computer or device and browser by signing off after you have finished accessing your account on our platform.  </p>
+                <p>We endeavor to protect the privacy of your account and other Personal Data we hold in our records, however, we cannot guarantee complete security. Unauthorized entry or use, hardware or software failure, and other factors, may compromise the security of user information on our platform at any time.  </p>
+                <h5>Google Sign-In Controls:</h5>
+                <p>You can manage your Google Sign-In permissions by:</p>
+                    <ul>
+                        <li><p>- Visiting your Google Account settings at <Link href="https://myaccount.google.com">https://myaccount.google.com</Link></p></li>
+                        <li><p>- Revoking FlexPass access to your Google account at <Link href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</Link></p></li>
+                        <li><p>- Managing connected apps in your Google Account security settings</p></li>
+                        <li><p>- Contacting us to delete data obtained through Google Sign-In</p></li>
+                    </ul>
+
+                    <h5>Apple Sign-In Controls:</h5>
+                    <p>You can manage your Apple Sign-In permissions by:</p>
+                    <ul>
+                        <li><p>- Going to Settings {`>`} [Your Name] {`>`} Sign-In & Security {`>`} Sign in with Apple on your Apple device</p></li>
+                        <li><p>- Selecting FlexPass and choosing {`"`}Stop Using Apple ID{`"`}</p></li>
+                        <li><p>- Managing your Apple ID at <Link href="https://appleid.apple.com">https://appleid.apple.com</Link></p></li>
+                        <li><p>- If using Hide My Email, manage it in Settings {`>`} [Your Name] {`>`} Sign-In & Security {`>`} Hide My Email</p></li>
+                        <li><p>- Contacting us to delete data obtained through Apple Sign-In</p></li>
+                    </ul>
+
+                    <h5>Facebook Login Controls:</h5>
+                    <p>You can manage your Facebook Login permissions by:</p>
+                    <ul>
+                        <li><p>- Going to Facebook Settings & Privacy {`>`}  Settings {`>`}  Apps and Websites </p></li>
+                        <li><p>- Finding FlexPass in your active apps and websites list</p></li>
+                        <li><p>- Clicking {`"`}Remove{`"`} to revoke access</p></li>
+                        <li><p>- Or visit <Link href="https://www.facebook.com/settings?tab=applications">https://www.facebook.com/settings?tab=applications</Link></p></li>
+                        <li><p>- Review and modify the information FlexPass can access</p></li>
+                        <li><p>- Contacting us to delete data obtained through Facebook Login</p></li>
+                    </ul>
+                
                 <h5>Information retention and deletion </h5>
-                <p>Through
-                    your account settings, you may access, and, in some cases, edit or
-                    delete the following information you’ve provided to us: </p>
+                <p>Through your account settings, you may access, and, in some cases, edit or delete the following information you have provided to us: </p>
                 <p >
                     <font face="Lato, sans-serif"><font size="2" >-
                         name<br />
@@ -189,32 +271,25 @@ function PrivacyContent() {
                         - credit card
                         information </font></font>
                 </p>
-                <p>Please
-                    note that, although you can delete your existing credit card
-                    information on your account, we may save a unique-identification
-                    “fingerprint” for that credit card solely for our internal use to
-                    identify that card as being associated with your account. </p>
-                <p>The
-                    information you can view, update, and delete may change as the
-                    Services change. If you have any questions about viewing or updating
-                    information, we have on file about you. Please contact us at <Link href={''}>info@myFlexPass.com</Link></p>
+                <p>Please note that, although you can delete your existing credit card information on your account, we may save a unique-identification “fingerprint” for that credit card solely for our internal use to identify that credit card as being associated with your account.</p>
+                <p>The information you can view, update, and delete may change as the Services change. If you have any questions about viewing or updating information that we have on file about you, please contact us at <Link href="mailto:info@myflexpass.com">info@myflexpass.com</Link></p>
                 <h5>Your choices</h5>
                 <p>You
                     can always opt not to disclose information to us, but keep in mind
                     some information may be needed to register with us or to take
                     advantage of some of our features.</p>
+                    <p>You may be able to add, update, or delete information as explained above. We may use any aggregated data derived from or incorporating your Personal Data after you update or delete it, but not in a manner that will identify you personally. </p>
                 <h5>For California users</h5>
                 <p>Personal
                     Data collected for the following purposes and using the following
                     services: </p>
+                
                 <h5>Access to third-party accounts </h5>
-                <p><strong>Access to third-party accounts </strong></p>
+                <p><strong>Facebook account access </strong></p>
                 <p>Permissions: About Me; Contact email; Email; Photos</p>
                 <p><strong>Stripe
                     account access</strong></p>
-                <p>Personal
-                    Data: various types of Data as specified in the privacy policy of the
-                    service </p>
+                <p>Personal Data: various types of Personal Data as specified in the privacy policy of the service on Stripe’s platform.  </p>
                 <h5>Analytics</h5>
                 <p><strong>Google
                     Analytics, Analytics collected directly and Facebook Ads conversion
@@ -223,9 +298,7 @@ function PrivacyContent() {
                     Data: Cookies; Usage Data </p>
                 <p><strong>Facebook
                     Analytics for Apps</strong></p>
-                <p>Personal
-                    Data: Usage Data; various types of Data as specified in the privacy
-                    policy of the service </p>
+                <p>Personal Data: Usage Data; various types of Personal Data as specified in the privacy policy of the service</p>
                 <h5>Contacting the User</h5>
                 <p><strong>Mailing
                     list or newsletter </strong></p>
@@ -244,72 +317,49 @@ function PrivacyContent() {
                     Camera permission; Contacts permission; Phone permission; SMS
                     permission; Social media accounts permission; Storage permission. </p>
                 <p><strong>Handling payments • Stripe</strong></p>
-                <p>Personal Data: various types of Data as specified in the privacy policy of the service</p>
+                <p>Personal Data: various types of Personal Data as specified in the privacy policy of the service </p>
                 <p><strong>Location-based interactions • Geolocation</strong></p>
                 <p>Personal Data: geographic position</p>
                 <p>Personal Data: Cookies; Usage Data</p>
-                <h5>The Service is not directed to children under the age of 18</h5>
+                <h5>The Services are not directed to children under the age of 18</h5>
                 <p><strong>Access to third-party accounts </strong></p>
-                <p>Users
-                    declare themselves to be adult according to their applicable
-                    legislation. Minors may use this application only with the assistance
-                    of a parent or guardian. Under no circumstance, persons under the age
-                    of 18 may use this service. </p>
+                <p>Users declare themselves to be adults according to their applicable legislation. Minors may use this application only with the assistance of a parent or guardian. Under no circumstance, persons under the age of 18 may use this service alone without the assistance of a parent or guardian. </p>
                 <h5>Unique device identification</h5>
                 <p>This application may track Users by storing a unique identifier of their device, for analytics purposes or for storing Users preferences.</p>
                 <p>Flex Pass may process your Personal Data because:</p>
                 <ul>
                     <li><p >
-                        <font face="Lato, sans-serif"><font size="2" >We
-                            need to perform a contract with you </font></font>
+                        <font face="Lato, sans-serif"><font size="2" >We need to sign a contract with you </font></font>
                     </p></li>
                     <li><p >
                         <font face="Lato, sans-serif"><font size="2" >You
                             have given us permission to do so </font></font>
                     </p></li>
                     <li><p >
-                        <font face="Lato, sans-serif"><font size="2">The
-                            processing is in our legitimate interests, and it’s not overridden
-                            by your rights </font></font>
+                        <font face="Lato, sans-serif"><font size="2">The processing is in our legitimate interests, and it`s not overridden by your rights </font></font>
                     </p></li>
                     <li><p >
                         <font face="Lato, sans-serif"><font size="2">For
                             payment processing purposes </font></font>
                     </p></li>
                     <li><p >
-                        <font face="Lato, sans-serif"><font size="2">To
-                            comply with the law </font></font>
+                        <font face="Lato, sans-serif"><font size="2">To comply with applicable laws</font></font>
                     </p></li>
                 </ul>
                 <h5>Governing Law</h5>
-                <p>This
-                    Privacy Policy and the use of the Website/App are governed by the
-                    laws of California. The parties undertake to first try to resolve the
-                    dispute with by negotiation. If the parties fail to reach an amicable
-                    resolution through negotiation, Flex Pass agrees to submit the
-                    dispute to the competent jurisdiction of the State and federal courts
-                    in San Jose. </p>
-                <h5>Data
-                    Protection Officer </h5>
-                <p>We
-                    have appointed a Data Protection Officer (“DPO”) who is
-                    responsible for overseeing questions about this privacy notice. If
-                    you have any questions about this privacy notice, including any
-                    requests to exercise your legal rights, please contacts Data
-                    Protection Officer, at </p>
+                <p>This Privacy Policy and the use of the Website and/or Services are governed by the laws of California. The parties undertake to first try to resolve the dispute with each other by negotiation in good faith. If the parties fail to reach an amicable resolution through negotiation, Flex Pass agrees to submit the dispute to the competent jurisdiction of the state and federal courts in San Jose. </p>
+                <h5>Data Protection Officer </h5>
+                <p>We have appointed a Data Protection Officer (“DPO”) who is responsible for overseeing questions about this Privacy Policy notice. If you have any questions about this Privacy Policy , including any requests to exercise your legal rights, please contacts Data Protection Officer at <Link href="mailto:info@myflexpass.com">info@myflexpass.com</Link>. </p>
                 <h5>Changes to this Privacy Policy </h5>
-                <p>We
-                    may update our Privacy Policy from time to time. We will notify you
-                    of any changes by posting the new Privacy Policy on this app.</p>
-                <p>We
-                    will let you know via email and/or a prominent notice on our Service,
-                    prior to the change becoming effective and update the `effective date` at the top of this Privacy Policy. </p>
-                <p>You
-                    are advised to review this Privacy Policy periodically for any
-                    changes. Changes to this Privacy Policy are effective when they are
-                    posted on this page. </p>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website or app.</p>
+                <p>We will let you know via email and/or a prominent notice on our Services, prior to the change becoming effective and update the {`"`}effective date{`"`} at the top of this Privacy Policy. </p>
+                <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. </p>
                 <h5>Contact Us</h5>
-                <p>If you have any questions about this Privacy Policy, don’t hesitate to contact us. e-mail: <Link href={''}>info@myFlexPass.com</Link>
+                <p>If you have any questions about this Privacy Policy, don’t hesitate to contact us at e-mail: <Link href="mailto:info@myflexpass.com">info@myflexpass.com</Link>
+                        <br />
+                        Data Protection Officer**: <Link href="mailto:info@myflexpass.com">info@myflexpass.com</Link>
+                        <br />
+                        Website:  <Link href="https://www.myflexpass.com">https://www.myflexpass.com</Link>
                 </p>
             </div>
         </div>

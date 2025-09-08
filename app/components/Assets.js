@@ -32,6 +32,11 @@ import app_store from '../assets/app-store.webp'
 import download_App from '../assets/download_app.jpg'
 import flexifitpass5 from '../assets/flexifitpass5-t.png'
 import FPFlexPassOnly from '../assets/FPFlexPassOnly.jpg'
+import aboutBanner04 from "../assets/about/about.webp";
+import FPAmbassador_MMM from "../assets/about/FPAmbassador-MMM.webp";
+import homebanner from "../assets/homebanner/homebanner.webp";
+import homebanner_new from "../assets/homebanner/homebanner_new.webp";
+
 // import video from '../video/new_promotions.mp4'
 const assets = {
     logo:logo,
@@ -68,6 +73,10 @@ const assets = {
     download_App:download_App,
     flexifitpass5:flexifitpass5,
     FPFlexPassOnly:FPFlexPassOnly,
+    aboutBanner04:aboutBanner04,
+    FPAmbassador_MMM:FPAmbassador_MMM,
+    homebanner:homebanner,
+    homebanner_new:homebanner_new,
     //video:video,
 }
 

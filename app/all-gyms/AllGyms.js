@@ -49,7 +49,7 @@ function AllGyms() {
 
   return (
     <>
-      <div className='row mt-lg-2'>
+      <div className='row mt-lg-0 ptop_innerpage_contact_bottom p-5'>
         <h2 className='border-bottom pb-3 text-center mb-4'>All Gyms</h2>
         {gymData.map((item, i) => {
           const cleanDescription = sanitizeHtml(item.description);

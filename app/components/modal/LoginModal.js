@@ -25,6 +25,7 @@ function LoginModal({ show, onClose, handleSubmit, data, handleChange, error, sh
                     name="email"
                     value={data.email}
                     onChange={handleChange}
+                    autoComplete="off"
                   />
                 </div>
                 <div className="mb-2 position-relative">
@@ -36,12 +37,13 @@ function LoginModal({ show, onClose, handleSubmit, data, handleChange, error, sh
                   /> */}
       <input
         type={showPassword ? 'text' : 'password'}
-        className="form-control"
+            className="form-control pe-5"  
         id="password"
         placeholder="Enter password"
         name="password"
         value={data.password}
         onChange={handleChange}
+        autoComplete="new-password"
       />
       <span
         onClick={togglePasswordVisibility}
@@ -50,7 +52,8 @@ function LoginModal({ show, onClose, handleSubmit, data, handleChange, error, sh
           right: '10px',
           top: '50%',
           transform: 'translateY(-50%)',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          zIndex: 2
         }}
       >
         {showPassword ? <i className="fas fa-eye" style={{color:'#2167b2', fontSize:'13px'}} aria-hidden="true"></i> : <i className="fas fa-eye-slash" style={{ fontSize:'13px'}} aria-hidden="true"></i>}

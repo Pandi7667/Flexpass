@@ -50,7 +50,7 @@ export default async function GymDetailsPage({ params }) {
   const gym = gyms?.data?.find((g) => sanitizeSlug(g.slug) === slug);
 
   if (!gym || !gym.id || !gym.name) {
-  return <PageNotFound />; // Or a fallback UI
+  return <PageNotFound />; 
 }
 
   return <GymDetailsWrapper gym={gym} slug={slug} />;

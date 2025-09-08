@@ -10,10 +10,12 @@ import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import ClientsList from '../components/clients/Clients'
-
-import { GoogleMap, Marker } from '@react-google-maps/api';
+import FAQSection from '../components/faq/FAQ'
+//import { GoogleMap, Marker } from '@react-google-maps/api';
 
 import DOMPurify from 'isomorphic-dompurify';
+//import MapView from '../components/map/MapView';
+import SingleGymMap from '../components/map/SingleGymMap'
 
 export const sanitizeHtml = (dirtyHtml = '') => {
   const cleanedHtml = dirtyHtml
@@ -27,13 +29,12 @@ export const sanitizeHtml = (dirtyHtml = '') => {
   });
 };
 
-const mapContainerStyle = {
-  width: '100%',
-  height: '400px',
-};
+// const mapContainerStyle = {
+//   width: '100%',
+//   height: '400px',
+// };
 
 const GymDetailsPage = ({ gym, slug }) => {
-
   const router = useRouter();
   const { id } = useParams();
   const [mapDetails, setMapDetails] = useState(gym || {});
@@ -41,14 +42,13 @@ const GymDetailsPage = ({ gym, slug }) => {
   const mapRef = useRef(null);
 
   useEffect(() => {
-
     const gymId = sessionStorage.getItem('selected_gym_id');
 
     if (!gymId) {
       //router.push('/partners');
     }
-    console.log('gymId',gymId);
 
+    //console.log('gymId',gymId);
     const url = `/gym/${gymId}`;
     GetAPI(url, (res) => {
       if (res?.status === 1 && Array.isArray(res.data) && res.data.length > 0) {
@@ -60,7 +60,6 @@ const GymDetailsPage = ({ gym, slug }) => {
   }, [id, slug]);
 
   useEffect(() => {
-
     if (slug && gymData?.length) {
       const decodedSlug = decodeURIComponent(slug);
       const matchedGym = gymData.find(
@@ -160,41 +159,46 @@ const GymDetailsPage = ({ gym, slug }) => {
   }, [mapDetails]);
 
     const cleanDescription = sanitizeHtml(mapDetails.description);
+    const getFqa = gym?.faqs;
 
   return (
     <>
-      <div className='row mt-lg-2'>
+      <div className='mt-lg-0 ptop_innerpage_contact_bottom'>
+        <div className='container'>
+          <div className='row'>
         <div className='col-lg-12'>
           <h1 className='border-bottom pb-3 text-center mb-4'>{mapDetails.name}</h1>
         </div>
         <div className='col-lg-12'>
           <div className='row mb-3'>
             <div className='col-lg-4 col-sm-4 col-12'>
-              <div className='gym-img-details'>
+              <div className='gym-img-details border rounded-5'>
                 {Array.isArray(mapDetails.images) && mapDetails.images.length > 0 ? (
                   <Slider {...settings}>
                     {mapDetails.images.map((img, idx) => (
                       <div key={idx}>
                         <Image width={300}
                           height={200}
+                          className='rounded-5'
                           objectFit="contain" alt={mapDetails.name} src={img.imageurl} />
                       </div>
                     ))}
                   </Slider>
                 ) : (
-                  <>
-            {mapDetails?.image ? (
-              <Image
-                alt={mapDetails.name || 'Gym image'}
-                width={300}
-                height={200}
-                style={{ objectFit: 'contain' }}
-                src={mapDetails.image}
-              />
-            ) : (
-              <></>
-            )}
-                              </>
+                    <>
+                      {mapDetails?.image ? (
+                        <Image
+                          alt={mapDetails.name || 'Gym image'}
+                          width={300}
+                          height={200}
+                          className='rounded-5'
+                          style={{ objectFit: 'contain' }}
+                          src={mapDetails.image}
+                        />
+                      ) : (
+                        <></>
+                      )}
+              </>
                 )}
               </div>
             </div>
@@ -202,7 +206,7 @@ const GymDetailsPage = ({ gym, slug }) => {
                 No Image Available
               </div> */}
             <div className='col-lg-4 col-sm-4 col-12'>
-              <div className='card-bx h-100 mb-4'>
+              <div className='card-bx h-100 mb-4 border rounded-5'>
                 <div className='row align-items-center h-100'>
                   <div className='col-lg-12 col-sm-12 col-12'>
                     <h3 className='mb-3'>Contact</h3>
@@ -234,7 +238,7 @@ const GymDetailsPage = ({ gym, slug }) => {
               </div>
             </div>
             <div className="col-lg-4 col-sm-4 col-12">
-              {/* <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+             {/* <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
                 <GoogleMap
                   mapContainerStyle={mapContainerStyle}
                   center={{
@@ -249,7 +253,7 @@ const GymDetailsPage = ({ gym, slug }) => {
                   }} />
                 </GoogleMap>
               </LoadScript> */}
-                {/* <GoogleMap
+              {/* <GoogleMap
                   mapContainerStyle={mapContainerStyle}
                   center={{
                     lat: parseFloat(mapDetails.latitude) || 39.8283,
@@ -264,7 +268,7 @@ const GymDetailsPage = ({ gym, slug }) => {
                     }}
                   />
                 </GoogleMap> */}
-                  {mapDetails.latitude && mapDetails.longitude && (
+              {/* {mapDetails.latitude && mapDetails.longitude && (
                     <GoogleMap
                       mapContainerStyle={mapContainerStyle}
                       center={{ lat: +mapDetails.latitude, lng: +mapDetails.longitude }}
@@ -274,29 +278,67 @@ const GymDetailsPage = ({ gym, slug }) => {
                         position={{ lat: +mapDetails.latitude, lng: +mapDetails.longitude }}
                       />
                     </GoogleMap>
-                  )}
+                  )} */}
+                    {/* {mapDetails && mapDetails.latitude && mapDetails.longitude && (
+                  <MapView
+                    latitude={mapDetails.latitude}
+                    longitude={mapDetails.longitude}
+                  />
+                )} */}
+                    {/* <MapView
+                latitude={mapDetails.latitude}
+                longitude={mapDetails.longitude}
+              /> */}
+                  <SingleGymMap
+                    latitude={+mapDetails.latitude}
+                    longitude={+mapDetails.longitude}
+                    gym={mapDetails}
+                  />
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div className='align-items-center'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-12 col-xl-12 col-12 text-left pt-lg-5 pb-lg-5 pt-3 pb-3'>
+              {/* <p>{mapDetails.description?.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim()}</p> */}
+              <div className='card border rounded-3 text-left shadow-sm'>
+                <div className='card-body p-3 text-left'>
+                  <div className="sanitized-html" dangerouslySetInnerHTML={{ __html: cleanDescription }} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className='row align-items-center'>
-        <div className='col-lg-12 col-xl-12 col-12 text-left pt-lg-5 pb-lg-5'>
-          {/* <p>{mapDetails.description?.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim()}</p> */}
-                    <div dangerouslySetInnerHTML={{ __html: cleanDescription }} />
+      <div className='mt-lg-5 mb-lg-5'>
+        <FAQSection getFqa={getFqa} />
+      </div>
+      <div className='align-items-center bg_blue'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-12 col-xl-12 col-12 text-center'>
+              <div className='d-flex justify-content-center align-items-center'>
+                <div><h3 className='mb-0 me-4'><Link href={'/download-the-app'} className='text-white' style={{ textDecoration: 'none' }}>Get the App</Link></h3></div>
+                <div>
+                  <div className='app-icons pt-2'>
+                    <Link href={'https://play.google.com/store/apps/details?id=com.inc.flexpass'}><Image alt='playstore' style={{ width: '200px', height: '68px' }} src={assets.playstore} /></Link>
+                    <Link href={'https://apps.apple.com/us/app/flex-pass-inc/id6479203678'}><Image alt='appstore' style={{ width: '200px', height: '68px' }} src={assets.appstore} /></Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
         </div>
       </div>
-      <div className='row align-items-center bg_blue'>
-        <div className='col-lg-12 col-xl-12 col-12 text-center'>
-          <h3 className='mb-3'><Link href={'/download-the-app'} className='text-white' style={{ textDecoration: 'none' }}>Get the App</Link></h3>
-          <div className='app-icons pt-2'>
-            <Link href={'https://play.google.com/store/apps/details?id=com.inc.flexpass'}><Image alt='playstore' style={{ width: '300px', height: '90px' }} src={assets.playstore} /></Link>
-            <Link href={'https://apps.apple.com/us/app/flex-pass-inc/id6479203678'}><Image alt='appstore' style={{ width: '300px', height: '90px' }} src={assets.appstore} /></Link>
-          </div>
-        </div>
-      </div>
-      <div className='row mt-lg-5 mb-lg-5'>
+      
+      <div className='mt-lg-0 mb-lg-0'>
   {/* <h2 className='pb-3 text-left mb-4 mt-4'>Other studios nearby</h2> */}
   <ClientsList />
+
   {/* {gymData.length >= 4 ? (
     gymData.slice(0, 4).map((item, i) => {
       const fallbackImage = '/default-gym.jpg'; 

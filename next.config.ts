@@ -26,26 +26,27 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
+  
+  //output: 'standalone',
   // basePath: '/production/flexpass_next',
   // assetPrefix: '/production/flexpass_next',
   trailingSlash: true,
   images: {
     domains: ['myflexpass.com', 'swaramtech.in'],
-    unoptimized: true, 
+    unoptimized: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/special-promotions',
-        permanent: false,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/special-promotions',
+  //       permanent: false,
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
-
 
 
 

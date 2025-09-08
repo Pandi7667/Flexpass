@@ -48,9 +48,14 @@ const router = useRouter();
     router.push('/download-the-app');
   };
 
+//  const router_membership = useRouter();
+  const Membership = () => {
+    router.push('/membership/#Membership');
+  };
+
   return (
     <>
-    <div className='row ptop_bottom' style={{ backgroundImage: `url(${howitworksbanner.src})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundAttachment: 'scroll', backgroundSize: 'cover' }}>
+    <div className='row ptop_bottom ptop_innerpage_bottom' style={{ backgroundImage: `url(${howitworksbanner.src})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundAttachment: 'scroll', backgroundSize: 'cover' }}>
         <div className='col-lg-12 col-sm-12 col-12'>
           <h1 className='text-center text-white'>
             <Image alt='flexpass' src={assets.FPFlexPassOnly} className='img-fluid' style={{ width: '244px', borderRadius: '10px', marginBottom: '20px' }} />
@@ -66,9 +71,16 @@ const router = useRouter();
                 className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
               >
                 <div className="content-bx">
-                  {step.title === "DOWNLOAD THE APP & SIGN UP" ? (
+                  {step.title === "DOWNLOAD THE APP & SIGN UP" || step.title === "CHOOSE YOUR PLAN" ? (
                     <h3
-                      onClick={DownApp}
+                     // onClick={DownApp} 
+                      onClick={() => {
+                        if (step.title === "DOWNLOAD THE APP & SIGN UP") {
+                          DownApp();
+                        } else if (step.title === "CHOOSE YOUR PLAN") {
+                          Membership();
+                        }
+                      }}
                       style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'underline' }}
                     >
                       {step.title}

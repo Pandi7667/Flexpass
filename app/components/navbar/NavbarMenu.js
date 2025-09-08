@@ -11,14 +11,17 @@ import Cookies from 'js-cookie';
 import { useLoading } from '../../context/LoadingContext';
 import { useRouter } from 'next/navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useLogin } from '../../context/LoginContext'
 
 export default function NavbarMenu() {
   const pathname = usePathname();
   const router = useRouter();
+  
   const { setLoading } = useLoading();
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
   }, []);
+  //useLogin
 
 //   const handleNavClick = (href) => (e) => {
 //   e.preventDefault();
@@ -37,19 +40,17 @@ export default function NavbarMenu() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
-  const handleResize = () => setIsMobile(window.innerWidth < 768);
-  const handleScroll = () => setScrolled(window.scrollY > 60);
+    setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
 
-  handleResize();
-
-  window.addEventListener('resize', handleResize);
-  window.addEventListener('scroll', handleScroll);
-
-  return () => {
-    window.removeEventListener('resize', handleResize);
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   //const handleToggleClick = () => setIsMobileNavVisible(!isMobileNavVisible);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
@@ -66,6 +67,10 @@ export default function NavbarMenu() {
     }
   };
 
+  const { user, isLoggedIn } = useLogin();
+  const apiURL = process.env.NEXT_PUBLIC_API_URL;
+
+  console.log('user',user, isLoggedIn);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -76,20 +81,24 @@ export default function NavbarMenu() {
       setError("Please fill in all fields.");
       return;
     }
-//NEXT_API_URL
+
     let apiUrl = '';
     switch (role) {
       case 'Admin':
-        apiUrl = 'https://api.myflexpass.com/admin/login';
+       // apiUrl = 'https://api.myflexpass.com/admin/login';
+          apiUrl = `${apiURL}/admin/login`;
         break;
       case 'AccountManager':
-        apiUrl = 'https://api.myflexpass.com/account-manager/login';
+        //apiUrl = 'https://api.myflexpass.com/account-manager/login';
+        apiUrl = `${apiURL}/account-manager/login`;
         break;
       case 'Partner':
-        apiUrl = 'https://api.myflexpass.com/partner/partner-login';
+        //apiUrl = 'https://api.myflexpass.com/partner/partner-login';
+        apiUrl = `${apiURL}/partner/partner-login`;
         break;
       case 'Member':
-        apiUrl = 'https://api.myflexpass.com/memberWeb/login';
+       //apiUrl = 'https://api.myflexpass.com/memberWeb/login';
+        apiUrl = `${apiURL}/memberWeb/login`;
         break;
       default:
         setError("Invalid role selected.");
@@ -134,17 +143,50 @@ export default function NavbarMenu() {
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
-  const handleNavClick = (href) => (e) => {
+//   const handleNavClick = (href) => (e) => {
+//   e.preventDefault();
+//   setLoading(true); 
+//   setTimeout(() => {
+//     router.push(href); // Navigate after 500ms
+//   }, 500); // 500 milliseconds = 0.5 seconds
+// };
+
+// const handleNavClick = (href) => (e) => {
+//   e.preventDefault();
+
+//   if (router.asPath === href) {
+//     return;
+//   }
+
+//   setLoading(true);
+//   setTimeout(() => {
+//     router.push(href);
+//   }, 500);
+// };
+
+const handleNavClick = (href) => (e) => {
   e.preventDefault();
+
+  console.log("pathname", pathname);
+  console.log("href", href);
+
   setLoading(true); 
+
+  if (pathname === href) {
+    setTimeout(() => {
+      setLoading(false); 
+    }, 500);
+    return;
+  }
+
   setTimeout(() => {
-    router.push(href); // Navigate after 500ms
-  }, 500); // 500 milliseconds = 0.5 seconds
+    router.push(href);
+  }, 500);
 };
 
- // const normalizedPath = pathname?.replace(/\/+$/, '');
+// const normalizedPath = pathname?.replace(/\/+$/, '');
 //const normalizedPath = pathname?.replace(/\/+$/, '') || '';
-    const normalizedPath = pathname?.replace(/\/$/, '') || '';
+const normalizedPath = pathname?.replace(/\/$/, '') || '';
 
 
   const staticAboutPaths = [
@@ -163,7 +205,8 @@ export default function NavbarMenu() {
   ];
 
   const isHomePage = pathname === '/home/';
-  const isBecomeaPartner = normalizedPath === '/become-a-partner';
+  const isBecomeaPartner = pathname === '/become-a-partner/';
+  console.log('isBecomeaPartner',isBecomeaPartner);
 
   // const isSlugPage =
   //   /^\/[^/]+$/.test(pathname || '') &&
@@ -196,12 +239,12 @@ export default function NavbarMenu() {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-md navbar-dark bg-dark bsb-navbar-hover bsb-navbar-caret 
+      <nav className={`navbar navbar-expand-md navbar-dark bg-dark bsb-navbar-hover bsb-navbar-caret
         ${isHomePage || isBecomeaPartner ? 'fixed-top' : ''}
         ${scrolled ? 'navbar-scrolled fixed-top' : ''} 
         ${isAboutPage ? 'navbar_inner' : ''}`} >
         <div className="container-fluid">
-          <Link className="navbar-brand" href="/home" onClick={handleNavClick('/home')}>
+          <Link className="navbar-brand" href="/home/" onClick={handleNavClick('/home/')}>
             <Image width={100} height={73} style={{objectFit:'contain'}} src={assets.logo} alt="Logo" className="logo" />
           </Link>
           <button
@@ -225,13 +268,13 @@ export default function NavbarMenu() {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1">
-                <li className="nav-item"><Link className={`nav-link ${normalizedPath === '/home' ? 'active' : ''}`} href="/home" onClick={handleNavClick('/home')} data-bs-dismiss="offcanvas" aria-label="Close">Home</Link></li>
-                <li className="nav-item"><Link className={`nav-link ${normalizedPath === '/about-us' ? 'active' : ''}`} href="/about-us" onClick={handleNavClick('/about-us')} data-bs-dismiss="offcanvas" aria-label="Close">About Us</Link></li>
-                <li className="nav-item"><Link className={`nav-link ${normalizedPath === '/how-it-works' ? 'active' : ''}`} href="/how-it-works" onClick={handleNavClick('/how-it-works')} data-bs-dismiss="offcanvas" aria-label="Close">How It Works</Link></li>
-                <li className="nav-item"><Link className={`nav-link ${normalizedPath === '/membership' ? 'active' : ''}`} href="/membership" onClick={handleNavClick('/membership')} data-bs-dismiss="offcanvas" aria-label="Close">Membership</Link></li>
+                <li className="nav-item"><Link className={`nav-link ${pathname === '/home/' ? 'active' : ''}`} href="/home/" onClick={handleNavClick('/home/')} data-bs-dismiss="offcanvas" aria-label="Close">Home</Link></li>
+                <li className="nav-item"><Link className={`nav-link ${pathname === '/about-us/' ? 'active' : ''}`} href="/about-us/" onClick={handleNavClick('/about-us/')} data-bs-dismiss="offcanvas" aria-label="Close">About Us</Link></li>
+                <li className="nav-item"><Link className={`nav-link ${pathname === '/how-it-works/' ? 'active' : ''}`} href="/how-it-works/" onClick={handleNavClick('/how-it-works/')} data-bs-dismiss="offcanvas" aria-label="Close">How It Works</Link></li>
+                <li className="nav-item"><Link className={`nav-link ${pathname === '/membership/' ? 'active' : ''}`} href="/membership/" onClick={handleNavClick('/membership/')} data-bs-dismiss="offcanvas" aria-label="Close">Membership</Link></li>
                 <li className="nav-item dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                   <span
-                    className={`nav-link dropdown-toggle ${['/become-a-partner', '/partners'].includes(normalizedPath) ? 'active' : ''}`}
+                    className={`nav-link dropdown-toggle ${['/become-a-partner/', '/partners/'].includes(pathname) ? 'active' : ''}`}
                     id="dropdown01"
                     onClick={handleDropdownClick}
                     style={{ cursor: 'pointer' }}
@@ -240,14 +283,14 @@ export default function NavbarMenu() {
                   </span>
                   {isDropdownOpen && (
                     <div className="dropdown-menu show" aria-labelledby="dropdown01">
-                      <Link className={`dropdown-item ${normalizedPath === '/become-a-partner' ? 'active' : ''}`} href="/become-a-partner" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/become-a-partner')}>Become a Partner</Link>
-                      <Link className={`dropdown-item ${normalizedPath === '/partners' ? 'active' : ''}`} href="/partners" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/partners')}>Partners</Link>
+                      <Link className={`dropdown-item ${pathname === '/become-a-partner/' ? 'active' : ''}`} href="/become-a-partner/" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/become-a-partner/')}>Become a Partner</Link>
+                      <Link className={`dropdown-item ${pathname === '/partners/' ? 'active' : ''}`} href="/partners/" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/partners/')}>Partners</Link>
                     </div>
                   )}
                 </li>
-                <li className="nav-item"><Link className={`nav-link ${normalizedPath === '/contact-us' ? 'active' : ''}`} href="/contact-us" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/contact-us')}>Contact Us</Link></li>
-                <li className="nav-item"><Link className="nav-link btn btn-primary mt-0 text-capitalize" href="/special-promotions" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/download-the-app')}>Download App</Link></li>
-                <li className="nav-item"><button className="nav-link btn btn-primary mt-0 text-capitalize" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleOpenModal}>Login</button></li>
+                <li className="nav-item"><Link className={`nav-link ${pathname === '/contact-us/' ? 'active' : ''}`} href="/contact-us/" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/contact-us/')}>Contact Us</Link></li>
+                <li className="nav-item"><Link className="nav-link btn btn-primary mt-0 text-capitalize" href="/download-the-app/" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleNavClick('/download-the-app/')}>Download App</Link></li>
+                <li className="nav-item"><button className="nav-link btn btn-primary mt-0 me-0 text-capitalize" data-bs-dismiss="offcanvas" aria-label="Close" onClick={handleOpenModal}>Login</button></li>
               </ul>
             </div>
           </div>

@@ -30,7 +30,7 @@ function Clients() {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -80,7 +80,7 @@ function Clients() {
   return (
     <div className='row slick_slider'>
       <div className='col'>
-        <h2 className='mb-2 mb-sm-3 mb-lg-5 mt-2 text-center'>Partners</h2>
+        <h2 className='mb-2 mb-sm-3 mb-lg-3 mt-0 text-center'>Partners</h2>
         <Slider {...settings}>
           {mapCategories.map((item, index) => (
             <div key={index}>
@@ -89,7 +89,7 @@ function Clients() {
                                   src={item.image}
                                   alt={item.name}
                                   width={300}               
-                                  height={200}              
+                                  height={100}              
                                   className="img-fluid"
                                   style={{ cursor: 'pointer' }}
                                   onClick={() => handleViewDetails(item)}

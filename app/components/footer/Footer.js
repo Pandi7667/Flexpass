@@ -8,7 +8,6 @@ import { usePathname } from 'next/navigation';
 import { useLoading } from '../../context/LoadingContext';
 import { useRouter } from 'next/navigation';
 
-
 function Footer() {
         const location = usePathname();
         const router = useRouter();
@@ -31,8 +30,7 @@ function Footer() {
                     <div className="footer">
                         <div className="container-fluid">
                             <div className="row align-items-center">
-                                <div className="col-lg-5 col-sm-4 col-xs-12"
-                                >
+                                <div className="col-lg-5 col-sm-4 col-xs-12">
                                     <div className="single_footer">
                                         <div className='row align-items-center'>
                                             <div className='col-lg-4 col-xl-4 col-12'>
@@ -113,25 +111,26 @@ function Footer() {
                             <div className="rowrow text-center mb-3 mt-3">
                                 <div className="col-lg-12 col-sm-12 col-xs-12">
                                     <ul className='align-middle'>
-                                        <li className={`${location.pathname === '/home' ? 'active' : ''}`}><Link href="/home" onClick={handleNavClick('/home')}>Home</Link></li>
-                                        <li className={`${location.pathname === '/about-us' ? 'active' : ''}`}><Link href="/about-us" onClick={handleNavClick('/about-us')}>About Us</Link></li>
-                                        <li className={`${location.pathname === '/how-it-works' ? 'active' : ''}`}><Link href="/how-it-works" onClick={handleNavClick('/how-it-works')}>How It Works</Link></li>
-                                        <li className={`${location.pathname === '/membership' ? 'active' : ''}`}><Link href="/membership" onClick={handleNavClick('/membership')}>Membership</Link></li>
-                                        <li className={`${location.pathname === '/partners' ? 'active' : ''}`}><Link href="/partners" onClick={handleNavClick('/partners')}>Partners</Link></li>
-                                        <li className={`${location.pathname === '/become-a-partner' ? 'active' : ''}`}><Link href="/become-a-partner" onClick={handleNavClick('/become-a-partner')}>Become a Partner</Link></li>
-                                        <li className={`${location.pathname === '/all-gyms' ? 'active' : ''}`}><Link onClick={(e) => {
+                                        <li className={`${location === '/home/' ? 'active' : ''}`}><Link href="/home/" onClick={handleNavClick('/home/')}>Home</Link></li>
+                                        <li className={`${location === '/about-us/' ? 'active' : ''}`}><Link href="/about-us/" onClick={handleNavClick('/about-us/')}>About Us</Link></li>
+                                        <li className={`${location === '/how-it-works/' ? 'active' : ''}`}><Link href="/how-it-works/" onClick={handleNavClick('/how-it-works/')}>How It Works</Link></li>
+                                        <li className={`${location === '/membership/' ? 'active' : ''}`}><Link href="/membership/" onClick={handleNavClick('/membership/')}>Membership</Link></li>
+                                        <li className={`${location === '/partners/' ? 'active' : ''}`}><Link href="/partners/" onClick={handleNavClick('/partners/')}>Partners</Link></li>
+                                        <li className={`${location === '/become-a-partner/' ? 'active' : ''}`}><Link href="/become-a-partner/" onClick={handleNavClick('/become-a-partner/')}>Become a Partner</Link></li>
+                                        <li className={`${location === '/all-gyms/' ? 'active' : ''}`}><Link onClick={(e) => {
                                             sessionStorage.removeItem('selected_gym_id');
-                                            handleNavClick('/all-gyms')(e); 
-                                        }} href="/all-gyms" >All Gyms</Link></li>
-                                        <li className={`${location.pathname === '/contact-us' ? 'active' : ''}`}><Link href="/contact-us" onClick={handleNavClick('/contact-us')}>Contact Us</Link></li>
-                                        <li className={`${location.pathname === '/privacy-policy' ? 'active' : ''}`}><Link href="/privacy-policy" onClick={handleNavClick('/privacy-policy')}>Privacy Policy</Link></li>
-                                        <li className={`${location.pathname === '/terms-and-conditions' ? 'active' : ''}`}><Link href="/terms-and-conditions" onClick={handleNavClick('/terms-and-conditions')}>Terms & Conditions</Link></li>
+                                            handleNavClick('/all-gyms/')(e); 
+                                        }} href="/all-gyms/" >All Gyms</Link></li>
+                                        <li className={`${location === '/contact-us/' ? 'active' : ''}`}><Link href="/contact-us/" onClick={handleNavClick('/contact-us/')}>Contact Us</Link></li>
+                                        <li className={`${location === '/faq/' ? 'active' : ''}`}><Link href="/faq/" onClick={handleNavClick('/faq/')}>FAQ`s</Link></li>
+                                        <li className={`${location === '/privacy-policy/' ? 'active' : ''}`}><Link href="/privacy-policy/" onClick={handleNavClick('/privacy-policy/')}>Privacy Policy</Link></li>
+                                        <li className={`${location === '/terms-and-conditions/' ? 'active' : ''}`}><Link href="/terms-and-conditions/" onClick={handleNavClick('/terms-and-conditions/')}>Terms & Conditions</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="row bg-gray">
                                 <div className="col-lg-12 col-sm-12 col-xs-12">
-                                    <p className="copyright">© 2025, All Rights Reserved <Link href="/home" onClick={handleNavClick('/home')}>FLEXPASS</Link>.</p>
+                                    <p className="copyright">© 2025, All Rights Reserved <Link href="/home/" onClick={handleNavClick('/home/')}>FLEXPASS</Link>.</p>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,8 @@ import { GetAPI } from "../components/api/Api";
 const MapView = dynamic(() => import("../components/map/MapView"), { ssr: false });
 
 export default function Home() {
-  const [gyms, setGyms] = useState([]);
+  
+const [gyms, setGyms] = useState([]);
 
  useEffect(() => {
     const url = '/gym';
@@ -38,7 +39,9 @@ export default function Home() {
 
   return (
     <>
+    <div className='row ptop_innerpage_contact_bottom' style={{position:'relative', zIndex:'0'}}>
       <MapView gyms={gyms} />
+    </div>
     </>
   );
 }

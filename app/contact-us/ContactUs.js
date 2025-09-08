@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { PostAPI } from '../components/api/Api'
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import ContactMsg from '../components/modal/ContactMsg'
 
 function Contact() {
 const router = useRouter();
@@ -16,7 +17,9 @@ const router = useRouter();
   });
 
   //const navigate = useNavigate();
-
+  const [showModal, setShowModal] = useState(false);
+  const handleCloseModal = () => setShowModal(false);
+  //const handleOpenModal = () => setShowModal(true);
   const handleChange = (e) => {
     const { value, files, name } = e.target;
 
@@ -47,13 +50,19 @@ const router = useRouter();
 
     if (action === 'insert') {
       PostAPI({ url: '/contact', data: formData }, (res) => {
+        // console.log(res);
          console.log(res);
-       // console.log(res);
-        //toast.success('Successfully added contact');
-       // navigate('/');
-       router.push(`/home`);
-        alert(`Thank you for contacting us! We've received your message and will be in touch shortly`);
-        setData({});
+        // toast.success('Successfully added contact');
+        // navigate('/');
+       // router.push(`/home`);
+          setShowModal(true);
+      //  alert(`Thank you for contacting us! We've received your message and will be in touch shortly`);
+          setData({});
+
+          setTimeout(() => {
+            router.push('/home');
+          }, 3000);
+
       });
     } else if (action === 'update') {
     //   PostAPI({ url: ``, data: formData }, (res) => {
@@ -64,7 +73,7 @@ const router = useRouter();
 
   return (
     <>
-    <div className='row mt-3'>
+    <div className='row mt-0 ptop_innerpage_contact_bottom'>
       <h2 className='border-bottom pb-3 text-center mb-4'>Contact Us</h2>
       <div className='col-lg-11 col-xl-11 col-sm-12 col-12 mx-auto'>
         <div className='row mb-4'>
@@ -172,6 +181,10 @@ const router = useRouter();
         </div>
       </div>
     </div>
+    <ContactMsg 
+        show={showModal}
+        onClose={handleCloseModal}
+    />
     </>
   )
 }

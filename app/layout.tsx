@@ -7,12 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer/Footer';
 import NavbarMenu from './components/navbar/NavbarMenu';
 //import Loader from './components/Loader';
-import LayoutWrapper from './components/LayoutWrapper'
+//import LayoutWrapper from './components/LayoutWrapper'
 //import { useEffect, useState } from "react";
 //import { useEffect, useState } from "react";
 import { LoadingProvider, useLoading } from './context/LoadingContext';
 import Loader from './components/Loader';
 import LoaderResetter from './components/LoaderResetter';
+import { LoginProvider } from './context/LoginContext';
 
 import Script from 'next/script';
 
@@ -43,6 +44,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="DewiJkAVl-7L4oUYK2AWr234VPp7bT-i5IIx9XFCem8" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -51,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
         />
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -61,9 +64,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               })(window,document,'script','dataLayer','GTM-${GTM_ID}');
             `,
           }}
+        /> */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T6FDPHNW');
+            `,
+          }}
         />
+        {/* <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T6FDPHNW');</script> */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11537152709"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-T6FDPHNW"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
@@ -80,24 +99,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
 
-        <noscript>
+        {/* <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
-        </noscript>
-        <div className="App container-fluid" id="main-content">
+        </noscript> */}
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6FDPHNW"
+height="0" width="0" style={{display:'none', visibility:'hidden'}}></iframe></noscript>
+        <div className="App" id="main-content">
           <LoadingProvider>
-            <GoogleMapsProvider>
-              <LayoutWrapper>
-                {!isErrorPage && <NavbarMenu />}
-                <LoaderResetter />
-                <MainContent>{children}</MainContent>
-                {!isErrorPage && <Footer />}
-              </LayoutWrapper>
-            </GoogleMapsProvider>
+            <LoginProvider>
+              <GoogleMapsProvider>
+                {/* <LayoutWrapper> */}
+                  {!isErrorPage && <NavbarMenu />}
+                  <LoaderResetter />
+                  <MainContent>{children}</MainContent>
+                  {!isErrorPage && <Footer />}
+                {/* </LayoutWrapper> */}
+              </GoogleMapsProvider>
+            </LoginProvider>
           </LoadingProvider>
         </div>
       </body>
